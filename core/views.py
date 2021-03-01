@@ -4,4 +4,5 @@ from .models import Album
 
 
 def index(request):
-    return render(request, '../templates/index.html')
+    albums = Album.objects.all()
+    return render(request, 'index.html', {'albums': albums})
