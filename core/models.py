@@ -6,16 +6,6 @@ class User(AbstractUser):
     pass
 
 
-class Album(models.Model):
-    title = models.CharField(max_length=200)
-    artist = models.CharField(max_length=200)
-    release_date = models.DateField()
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, blank=True, null=True, related_name="albums")
-    #Artist = models.ForeignKey(Artist, on_delete=models.CASCADE, blank=True, null=True, related_name="artists")
-    def __str__(self):
-        return self.title
-
 
 class Artist(models.Model):
     first_name = models.CharField(max_length=50)
@@ -23,5 +13,18 @@ class Artist(models.Model):
     label = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
-        return self.first_name
-        #return self.last_names
+        return "%s %s" % (self.first_name, self.last_name)
+
+class Album(models.Model):
+    title = models.CharField(max_length=200)
+    artist = models.CharField(max_length=200, blank=True)
+    release_date = models.DateField()
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, blank=True, null=True, related_name="albums")
+    #artist = models.ForeignKey(Artist, on_delete=models.CASCADE, blank=True, null=True, related_name="artists")
+    #artist = models.ForeignKey(Artist, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.title
+
+
+
