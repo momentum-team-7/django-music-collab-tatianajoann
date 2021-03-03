@@ -1,22 +1,7 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="static/music.css">
-</head>
+{% extends 'index.html' %}
 
-<body>
-    <div class="thing">
-        
+{% block content %}
         {% for artist in artists %}
-            <h1>{{ artist.first_name }} {{artist.last_name}}</h1>
-            <h2>{{ artist.label }}</h2>
+        <a href="{% url 'artist-detail' artist.pk %}"><div>{{ artist.first_name }} {{artist.last_name}}</div>
         {% endfor %}
-    </div>
-
-</body>
-</html>
+ {% endblock %}
