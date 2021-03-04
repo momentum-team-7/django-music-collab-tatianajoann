@@ -1,6 +1,6 @@
 body {
   font-family: "Noto Sans JP";
-  background: #f0f3f3;
+  background: #f4d8e7;
   margin: 0;
 }
 
@@ -24,19 +24,13 @@ h1 {
   margin: 0;
   font-family: "Satisfy";
   text-align: center;
-  font-size: 36px;
-  background: repeating-linear-gradient(
-    to left,
-    rgba(0, 116, 217, 0.85),
-    rgba(127, 219, 255, 0.85),
-    rgba(57, 204, 204, 0.85),
-    rgba(61, 153, 112, 0.85)
-  );
-  text-shadow: 0 0 3px #ffffff, 0 0 5px #0000ff;
+  font-size: 56px;
+  background: rgb(245, 163, 204);
+  text-shadow: 0 0 3px #ffffff, 0 0 5px #ff0000;
 }
 
 input {
-  width: 600px;
+  width: 300px;
   outline: none;
   border-radius: 20px;
   border-color: #d3d3d3;
@@ -47,22 +41,16 @@ input {
   margin-top: 10px;
 }
 
-.scroller {
+/* .scroller {
   position: -webkit-sticky;
   position: sticky;
   top: 0.1px;
   background: #f0f3f3;
-  background: repeating-linear-gradient(
-    to left,
-    rgba(0, 116, 217, 0.85),
-    rgba(127, 219, 255, 0.85),
-    rgba(57, 204, 204, 0.85),
-    rgba(61, 153, 112, 0.85)
-  );
+  background: rgb(230, 145, 187);
   padding-bottom: 30px;
   width: 100%;
   margin: 0;
-}
+} */
 
 button {
   font-family: "Noto Sans JP";
@@ -70,9 +58,14 @@ button {
   border-radius: 20px;
   border-style: solid;
   border-color: #d3d3d3;
-  width: 90px;
+  width: 30px;
   outline: none;
   margin-bottom: 10px;
+}
+
+.deletebtn {
+  width: 30px;
+  font-size: 12px;
 }
 
 button:hover {
@@ -87,4 +80,42 @@ button:hover {
 .item-container {
   display: flex;
   margin: 20px;
+}
+
+.homelinks {
+  text-align: center;
+  list-style-type: none;
+  font-size: 56px;
+}
+
+a:link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 3px #ffffff, 0 0 5px #edd8d5;
+}
+
+ul {
+  padding: 0px;
+}
+
+li {
+  margin-bottom: 60px;
+  color: #ffffff;
+  width: 100%;
+  font-family: "Satisfy";
+  background: rgb(245, 127, 186);
+  text-shadow: 0 0 3px #ffffff, 0 0 5px #ff1900;
+  border-bottom: #ffffff;
+  border-width: 25px;
+}
+
+div {
 }

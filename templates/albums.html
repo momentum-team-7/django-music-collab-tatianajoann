@@ -5,7 +5,11 @@
 
 {% for album in albums %}
 <a href="{% url 'album-detail' album.pk %}"> <h2>{{ album.title }} </h2></a>
+<button><a href="{% url 'delete-album' pk=album.pk%}" class="deletebtn">Delete Album</a></button>
+<button><a href="{% url 'edit-album' pk=album.pk%}">Edit Artist</a></button>
 {% endfor %}
+
+<button><a href="{% url 'add-album' %}">Add Album</a></button>
 
 
 {% endblock %}

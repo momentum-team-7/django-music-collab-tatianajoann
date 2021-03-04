@@ -12,9 +12,14 @@
 </head>
 
 <body>
+
 <h1 class= "scroller">music things</h1>
-<center><a href="{% url 'artists' %}">Artists</a></center>
-<center><a href="{% url 'albums' %}">Albums</a></center>
+
+<ul class= "homelinks">
+<li><a href="{% url 'artists' %}">Artists</a></li>
+<li><a href="{% url 'albums' %}">Albums</a></li>
+</ul>
+
 <div class= "item-container">
     <div class= "an-item">
 
